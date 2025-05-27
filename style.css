@@ -1,0 +1,611 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+  
+  nav {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 50px;
+  }
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    background-color: #34495e;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  .searchInput {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .searchInput::placeholder {
+    color: lightgray;
+  }
+  
+  .limitedOffer {
+    font-size: 20px;
+    border-bottom: 2px solid #27ae60;
+    cursor: pointer;
+  }
+  
+  .navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: #ecf0f1;
+    font-weight: 400;
+  }
+
+  .menuItem:hover {
+    color: #3498db;
+  }
+  
+  .slider {
+    background: url("./img/photo-1580398562556-d33329a0f29b.jpg");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    overflow: hidden;
+  }
+  
+  .sliderWrapper {
+    display: flex;
+    width: 600vw;
+    transition: all 1.5s ease-in-out;
+  }
+  
+  .sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .sliderBg {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .sliderImg {
+    z-index: 1;
+  }
+  
+  .sliderTitle {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .sliderPrice {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+    color: #2c3e50;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border: none;
+    transition: transform 0.3s ease;
+  }
+
+  .sliderPrice:hover {
+    transform: scale(1.05);
+  }
+  
+  .buyButton {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    border: none;
+    background-color: #2c3e50;
+    padding: 15px 30px;
+    border-radius: 5px;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .buyButton:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+  }
+  
+  .sliderItem:nth-child(1) .sliderBg {
+    background-color: #ecf0f1;
+  }
+  .sliderItem:nth-child(2) .sliderBg {
+    background-color: #e74c3c;
+  }
+  .sliderItem:nth-child(3) .sliderBg {
+    background-color: #3498db;
+  }
+  .sliderItem:nth-child(4) .sliderBg {
+    background-color: #2ecc71;
+  }
+  .sliderItem:nth-child(5) .sliderBg {
+    background-color: #9b59b6;
+  }
+  .sliderItem:nth-child(6) .sliderBg {
+    background-color: #f1c40f;
+  }
+
+  .sliderItem:nth-child(1) .sliderPrice {
+    color: #2c3e50;
+  }
+  .sliderItem:nth-child(2) .sliderPrice {
+    color: #c0392b;
+  }
+  .sliderItem:nth-child(3) .sliderPrice {
+    color: #2980b9;
+  }
+  .sliderItem:nth-child(4) .sliderPrice {
+    color: #27ae60;
+  }
+  .sliderItem:nth-child(5) .sliderPrice {
+    color: #8e44ad;
+  }
+  .sliderItem:nth-child(6) .sliderPrice {
+    color: #d35400;
+  }
+  
+  .features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #fff;
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .featureIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .featureTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .featureDesc {
+    color: gray;
+    width: 80%;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  .product {
+    height: 100vh;
+    background-color: #ecf0f1;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .payment {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .payTitle {
+    font-size: 20px;
+    color: lightgray;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .payInput::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  
+  .cardIcons {
+    display: flex;
+  }
+  
+  .cardIcon {
+    margin-right: 10px;
+  }
+  
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sm {
+    width: 30%;
+  }
+  
+  .payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payButton:hover {
+    background-color: #3498db;
+  }
+  
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+  .productImg {
+    width: 50%;
+    transition: all 0.5s ease;
+  }
+  
+  .productDetails {
+    width: 500px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .productTitle {
+    font-size: 75px;
+    font-weight: 900;
+  }
+  
+  .productDesc {
+    font-style: 24px;
+    color: gray;
+  }
+  
+  .colors,
+  .sizes {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .color {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color:greenyellow;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .color:last-child {
+    background-color: darkblue;
+  }
+  
+  .size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .productButton {
+    float: right;
+    padding: 15px 30px;
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .productButton:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+  }
+  
+  .gallery {
+    padding: 50px;
+    display: flex;
+  }
+  
+  .galleryItem {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .galleryImg {
+    width: 100%;
+  }
+  
+  .newSeason {
+    display: flex;
+  }
+  
+  .nsItem {
+    flex: 1;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .nsImg {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .nsTitle {
+    font-size: 40px;
+  }
+  
+  .nsButton {
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  footer {
+    display: flex;
+  }
+  
+  .footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .fMenuTitle {
+    font-size: 16px;
+  }
+  
+  .fList {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .fInput {
+    padding: 5px;
+  }
+  
+  .fButton {
+    padding: 5px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .fButton:hover {
+    background-color: #3498db;
+  }
+  
+  .fIcons{
+    display: flex;
+  }
+  
+  .fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .copyright{
+    font-weight: 300;
+    font-size: 14px;
+  }
+  
+  @media screen and (max-width:480px) {
+    nav{
+      padding: 20px;
+    }
+  
+    .search{
+      display: none;
+    }
+  
+    .navBottom{
+      flex-wrap: wrap;
+    }
+  
+    .menuItem{
+      margin: 20px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  
+    .slider{
+      clip-path: none;
+    }
+  
+    .sliderImg{
+      width: 90%;
+    }
+  
+    .sliderBg{
+      width: 100%;
+      height: 100%;
+    }
+  
+    .sliderTitle{
+      display: none;
+    }
+  
+    .sliderPrice{
+      top: unset;
+      bottom: -50;
+      left: 0;
+      background-color: lightgrey;
+    }
+  
+    .buyButton{
+      right: 0;
+      top: 0;
+    }
+  
+    .features{
+      flex-direction: column;
+    }
+  
+    .product{
+      clip-path: none ;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .productImg{
+      width: 80%;
+    }
+  
+    .productDetails{
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      top: 0;
+    }
+  
+    .productTitle{
+      font-size: 50px;  
+      margin: 0;
+    }
+  
+    .gallery{
+      display: none;
+    }
+  
+    .newSeason{
+      flex-direction: column;
+    }
+  
+    .nsItem:nth-child(2){
+      padding: 50px;
+    }
+  
+    footer{
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footerLeft{
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .footerRight{
+      padding: 20px;
+      width: 90%;
+      align-items: center;
+      background-color: whitesmoke;
+    }
+  
+    .payment{
+      width: 90%;
+      padding: 20px;
+    }
+  }
