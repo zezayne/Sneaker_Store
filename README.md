@@ -13,4 +13,5 @@ Steps to deploy locally:
 
 Notes: 
 a. The SQL Database can be accessed using http://localhost/phpmyadmin/
+
 b. The Admin Webpage can be accessed using http://localhost/sneaker_store/admin.php
